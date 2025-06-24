@@ -1,0 +1,29 @@
+#Crear una funcion que calcule dias de nacimiento dada la fecha de nacimiento y fecha actual
+
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jun 23 17:23:11 2025
+
+@author: gabri
+"""
+
+def calcular_edad(dia_nacio: int, mes_nacio: int, anio_nacio: int , dia_actual :int, mes_actual: int, anio_actual: int) ->str:
+  
+   # Convertimos ambas fechas a días totales
+   dias_nacimiento = anio_nacio * 360 + mes_nacio * 30 + dia_nacio
+   dias_actual = anio_actual * 360 + mes_actual * 30 + dia_actual
+
+   # Calculamos la diferencia en días
+   dias_total = dias_actual - dias_nacimiento
+
+   # Convertimos de nuevo a años, meses y días
+   anios = dias_total // 360
+   dias_total %= 360
+   meses = dias_total // 30
+   dias = dias_total % 30
+
+   return str(anios)+"años,"+str(meses)+"meses,"+str(dias)+"dias"
+
+
+
+#calcular_edad(5,2,1996,23,6,1999)
