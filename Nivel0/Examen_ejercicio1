@@ -1,0 +1,23 @@
+"""Definir una funcion que calcule la velocidad con la que cae un objeto en caida libre"""
+def vel_en_caida_libre(altura: float) -> float:
+    a=9.8
+    v0= 0
+    
+    vel = round(float(((v0)**2+2*a*altura)**(1/2)),2)
+    return vel
+    
+
+altura=float(input("Ingresa altura: "))
+
+print("Salida es: ",str(vel_en_caida_libre(altura)))
+
+"
+--------------
+def vel_en_caida_libre(altura: float) -> float:
+    a=9.8
+    v0= 0
+ 
+    vel = float(((v0)**2+2*a*altura)**(1/2))
+    return round(vel,2)
+
+"
